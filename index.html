@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LEYA ORGANICS - Premium herbal product manufacturing and sales. 100% natural, GMP certified herbal medicines, supplements, and skincare products."
+    />
+    <meta
+      name="keywords"
+      content="herbal products, ayurvedic, natural medicine, LEYA ORGANICS, herbal manufacturing"
+    />
+    <title>LEYA ORGANICS | Premium Herbal Products</title>
+    <link
+      rel="icon"
+      href="assets/logo-1-removebg-preview.png"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <img
+        src="assets/logo-1-removebg-preview.png"
+        alt="LEYA ORGANICS"
+        class="loading-logo"
+      />
+      <div class="loading-spinner"></div>
+      <p class="loading-text">LEYA ORGANICS</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img
+            src="assets/logo-1-removebg-preview.png"
+            alt="LEYA ORGANICS"
+            class="navbar-logo"
+          />
+          <span class="navbar-brand-text">LEYA <span>ORGANICS</span></span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button
+            id="dark-mode-toggle"
+            class="nav-icon-btn"
+            aria-label="Toggle dark mode"
+            title="Dark Mode"
+          >
+            🌙
+          </button>
+          <a
+            href="login.html"
+            class="nav-icon-btn"
+            aria-label="Admin Login"
+            title="Login"
+            >👤</a
+          >
+          <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-bg-fallback"></div>
+      <div class="hero-bg">
+        <img
+          src="assets/background image.png"
+          alt="Herbal Products Background"
+          class="hero-bg-image"
+        />
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-badge">🌿 100% Natural & Herbal</span>
+          <h1 class="hero-title">Welcome to <span>LEYA ORGANICS</span></h1>
+          <p class="hero-description">
+            Your trusted partner in premium herbal product manufacturing. We
+            craft nature's finest ingredients into high-quality Ayurvedic
+            medicines, supplements, and skincare products — GMP certified and
+            made with care.
+          </p>
+          <div class="hero-buttons">
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+            <a
+              href="contact.html"
+              class="btn btn-secondary"
+              style="color: #fff; border-color: #fff"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
+      <a href="#why-choose-us" class="hero-scroll" aria-label="Scroll down"
+        >↓</a
+      >
+    </header>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose-us" class="section">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">Why Choose Us</span>
+          <h2 class="section-title">The LEYA ORGANICS Difference</h2>
+          <p class="section-subtitle">
+            We combine ancient Ayurvedic wisdom with modern manufacturing
+            excellence.
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon">🌱</div>
+            <h3>Natural Ingredients</h3>
+            <p>
+              Sourced from organic farms, our products use only pure, natural
+              herbs without harmful chemicals.
+            </p>
+          </div>
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon">🍃</div>
+            <h3>100% Herbal</h3>
+            <p>
+              Every product is crafted from traditional herbal formulations
+              passed down through generations.
+            </p>
+          </div>
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon">✅</div>
+            <h3>GMP Certified</h3>
+            <p>
+              Our manufacturing facility meets Good Manufacturing Practice
+              standards for quality assurance.
+            </p>
+          </div>
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon">🚚</div>
+            <h3>Fast Delivery</h3>
+            <p>
+              Quick and reliable shipping across India with secure packaging to
+              preserve product freshness.
+            </p>
+          </div>
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon">⭐</div>
+            <h3>Customer Satisfaction</h3>
+            <p>
+              Thousands of happy customers trust us for their health and
+              wellness needs every day.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section bg-cream">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">Our Products</span>
+          <h2 class="section-title">Featured Products</h2>
+          <p class="section-subtitle">
+            Discover our best-selling herbal products crafted with care and
+            precision.
+          </p>
+        </div>
+        <div id="featured-products" class="products-grid">
+          <!-- Products loaded dynamically via JavaScript -->
+        </div>
+        <div class="text-center mt-2 animate-on-scroll">
+          <a href="products.html" class="btn btn-primary">View All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span
+            class="section-tag"
+            style="background: rgba(255, 255, 255, 0.2); color: #fff"
+            >Testimonials</span
+          >
+          <h2 class="section-title">What Our Customers Say</h2>
+          <p class="section-subtitle">
+            Real experiences from people who trust LEYA ORGANICS.
+          </p>
+        </div>
+        <div class="testimonials-slider animate-on-scroll">
+          <div class="testimonial-track">
+            <div class="testimonial-slide">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "The Ashwagandha capsules have significantly reduced my stress
+                levels. LEYA ORGANICS products are genuinely pure and effective.
+                Highly recommended!"
+              </p>
+              <p class="testimonial-author">Priya Sharma</p>
+              <p class="testimonial-role">Wellness Enthusiast, Mumbai</p>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "I've been using their Turmeric powder for months. The quality
+                is exceptional and delivery is always on time. Best herbal brand
+                I've found!"
+              </p>
+              <p class="testimonial-author">Rajesh Kumar</p>
+              <p class="testimonial-role">Ayurveda Practitioner, Delhi</p>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "The Neem Face Wash cleared my skin naturally without any side
+                effects. LEYA ORGANICS truly lives up to their promise of 100%
+                herbal products."
+              </p>
+              <p class="testimonial-author">Ananya Reddy</p>
+              <p class="testimonial-role">Skincare Blogger, Hyderabad</p>
+            </div>
+          </div>
+          <div class="slider-dots">
+            <button
+              class="slider-dot active"
+              aria-label="Testimonial 1"
+            ></button>
+            <button class="slider-dot" aria-label="Testimonial 2"></button>
+            <button class="slider-dot" aria-label="Testimonial 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">FAQ</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Find answers to common questions about our products and services.
+          </p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-question">
+              Are your products 100% natural and herbal?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, all our products are made from 100% natural herbal
+                ingredients sourced from certified organic farms. We do not use
+                artificial preservatives, colors, or harmful chemicals.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-question">
+              How can I place an order?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                You can order any product by clicking the "Order on WhatsApp"
+                button on the product card. This will open WhatsApp with a
+                pre-filled message. You can also contact us through our contact
+                form.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-question">
+              Do you offer nationwide delivery?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, we deliver across India. Delivery typically takes 3-7
+                business days depending on your location. We ensure secure
+                packaging to maintain product quality during transit.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-question">
+              Are your products GMP certified?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Absolutely. Our manufacturing facility is GMP (Good
+                Manufacturing Practice) certified, ensuring every product meets
+                the highest quality and safety standards.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item animate-on-scroll">
+            <button class="faq-question">
+              Can I return a product if I'm not satisfied?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We accept returns within 7 days for unopened products with
+                manufacturing defects. Please contact our customer support team
+                via WhatsApp or email for return requests.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section bg-cream">
+      <div class="container">
+        <div class="newsletter-box animate-on-scroll">
+          <h2 class="section-title" style="font-size: 1.5rem">
+            Subscribe to Our Newsletter
+          </h2>
+          <p class="section-subtitle">
+            Get updates on new products, health tips, and exclusive offers.
+          </p>
+          <form id="newsletter-form" class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+              aria-label="Email address"
+            />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="navbar-brand-text">LEYA <span>ORGANICS</span></div>
+            <p class="footer-desc">
+              Premium herbal product manufacturing company dedicated to bringing
+              nature's healing power to your doorstep. GMP certified, 100%
+              natural.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+              <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+              <a
+                href="https://wa.me/918838850766"
+                class="social-icon"
+                aria-label="WhatsApp"
+                target="_blank"
+                >💬</a
+              >
+              <a href="#" class="social-icon" aria-label="YouTube">▶️</a>
+            </div>
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="login.html">Admin Login</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Categories</h4>
+            <ul class="footer-links">
+              <li><a href="products.html">Powders</a></li>
+              <li><a href="products.html">Skincare</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact Info</h4>
+            <ul class="footer-contact">
+              <li>
+                📍 MGR Nagar MettupattiPudur Begampur Post Dindigul-624002
+              </li>
+              <li>📞 +91 8838850766</li>
+              <li>📧 info@sriherbalcare.com</li>
+              <li>💬 WhatsApp: 8838850766</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Sri Herbal Care. All Rights Reserved.</p>
+          <div class="footer-legal">
+            <a href="#" data-legal="privacy">Privacy Policy</a>
+            <a href="#" data-legal="terms">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

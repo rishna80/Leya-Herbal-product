@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Leya Organics Admin Dashboard - Manage products, orders, and enquiries"
+    />
+    <title>Admin Dashboard | Leya Organics</title>
+    <link
+      rel="icon"
+      href="./assets/logo-1-removebg-preview.png"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="dashboard-layout">
+      <!-- Sidebar -->
+      <aside class="dashboard-sidebar">
+        <div class="sidebar-header">
+          <img src="./assets/logo-1-removebg-preview.png" alt="Logo" />
+          <h3>Leya Organics</h3>
+          <p>Admin Panel</p>
+        </div>
+        <nav class="sidebar-menu">
+          <button class="sidebar-link active" data-panel="dashboard">
+            <span>📊</span> Dashboard
+          </button>
+          <button class="sidebar-link" data-panel="products">
+            <span>📦</span> Products
+          </button>
+          <button class="sidebar-link" data-panel="orders">
+            <span>🛒</span> Orders
+          </button>
+          <button class="sidebar-link" data-panel="enquiries">
+            <span>📧</span> Enquiries
+          </button>
+          <button class="sidebar-link logout" id="logout-btn">
+            <span>🚪</span> Logout
+          </button>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div style="display: flex; align-items: center; gap: 1rem">
+            <button
+              id="sidebar-toggle"
+              class="sidebar-toggle"
+              aria-label="Toggle sidebar"
+            >
+              ☰
+            </button>
+            <h2 id="dashboard-title">Dashboard Overview</h2>
+          </div>
+          <div class="nav-actions">
+            <button
+              id="dark-mode-toggle"
+              class="nav-icon-btn"
+              aria-label="Toggle dark mode"
+            >
+              🌙
+            </button>
+            <a href="index.html" class="btn btn-secondary btn-sm"
+              >View Website</a
+            >
+          </div>
+        </header>
+
+        <div class="dashboard-content">
+          <!-- Dashboard Panel -->
+          <div id="panel-dashboard" class="dashboard-panel active">
+            <div class="dashboard-stats">
+              <div class="stat-box">
+                <div class="stat-box-icon products">📦</div>
+                <div class="stat-box-info">
+                  <h3 id="stat-products">0</h3>
+                  <p>Total Products</p>
+                </div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-box-icon orders">🛒</div>
+                <div class="stat-box-info">
+                  <h3 id="stat-orders">0</h3>
+                  <p>Total Orders</p>
+                </div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-box-icon enquiries">📧</div>
+                <div class="stat-box-info">
+                  <h3 id="stat-enquiries">0</h3>
+                  <p>Enquiries</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="data-table-wrapper">
+              <div class="data-table-header">
+                <h3>Recent Activity</h3>
+              </div>
+              <div id="recent-activity" style="padding: 1rem 1.5rem">
+                <p class="text-center" style="color: var(--text-secondary)">
+                  Loading...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Products Panel -->
+          <div id="panel-products" class="dashboard-panel">
+            <div class="data-table-wrapper">
+              <div class="data-table-header">
+                <h3>All Products</h3>
+                <button id="add-product-btn" class="btn btn-primary btn-sm">
+                  + Add Product
+                </button>
+              </div>
+              <div style="overflow-x: auto">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Image</th>
+                      <th>Name</th>
+                      <th>Category</th>
+                      <th>Price</th>
+                      <th>Featured</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="products-table-body">
+                    <tr>
+                      <td colspan="6" class="text-center">Loading...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Product Form (hidden by default) -->
+            <div
+              id="product-form-card"
+              class="product-form-card"
+              style="display: none; margin-top: 1.5rem"
+            >
+              <h3
+                id="form-title"
+                style="color: var(--color-primary-dark); margin-bottom: 1.5rem"
+              >
+                Add New Product
+              </h3>
+              <form id="product-form">
+                <div class="product-form-grid">
+                  <div>
+                    <div class="form-group">
+                      <label for="product-name">Product Name *</label>
+                      <input
+                        type="text"
+                        id="product-name"
+                        required
+                        placeholder="Enter product name"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="product-category">Category *</label>
+                      <input
+                        type="text"
+                        id="product-category"
+                        required
+                        placeholder="e.g. Capsules, Powders"
+                        list="category-suggestions"
+                      />
+                      <datalist id="category-suggestions">
+                        <option value="Capsules"></option>
+                        <option value="Powders"></option>
+                        <option value="Skincare"></option>
+                        <option value="Juices"></option>
+                        <option value="Syrups"></option>
+                        <option value="Oils"></option>
+                        <option value="Teas"></option>
+                      </datalist>
+                    </div>
+                    <div class="form-group">
+                      <label for="product-price">Price (₹) *</label>
+                      <input
+                        type="number"
+                        id="product-price"
+                        required
+                        min="1"
+                        step="1"
+                        placeholder="Enter price"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>
+                        <input
+                          type="checkbox"
+                          id="product-featured"
+                          style="width: auto; margin-right: 0.5rem"
+                        />
+                        Show in Featured Products (Home Page)
+                      </label>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="form-group">
+                      <label>Product Image</label>
+                      <input
+                        type="file"
+                        id="product-image-input"
+                        accept="image/*"
+                        style="display: none"
+                      />
+                      <div id="image-preview" class="image-preview">
+                        <div class="image-preview-placeholder">
+                          📷 Click to upload image
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="product-description">Description</label>
+                  <textarea
+                    id="product-description"
+                    placeholder="Product description"
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="product-benefits">Benefits</label>
+                  <textarea
+                    id="product-benefits"
+                    placeholder="Product benefits"
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="product-usage">Usage Instructions</label>
+                  <textarea
+                    id="product-usage"
+                    placeholder="How to use this product"
+                  ></textarea>
+                </div>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+                  <button type="submit" class="btn btn-primary">
+                    Save Product
+                  </button>
+                  <button
+                    type="button"
+                    id="cancel-form-btn"
+                    class="btn btn-secondary"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Orders Panel -->
+          <div id="panel-orders" class="dashboard-panel">
+            <div class="data-table-wrapper">
+              <div class="data-table-header">
+                <h3>Customer Orders</h3>
+              </div>
+              <div style="overflow-x: auto">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Product</th>
+                      <th>Price</th>
+                      <th>Status</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+                  <tbody id="orders-table-body">
+                    <tr>
+                      <td colspan="5" class="text-center">Loading...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enquiries Panel -->
+          <div id="panel-enquiries" class="dashboard-panel">
+            <div class="data-table-wrapper">
+              <div class="data-table-header">
+                <h3>Customer Enquiries</h3>
+              </div>
+              <div style="overflow-x: auto">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Mobile</th>
+                      <th>Email</th>
+                      <th>Message</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+                  <tbody id="enquiries-table-body">
+                    <tr>
+                      <td colspan="5" class="text-center">Loading...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

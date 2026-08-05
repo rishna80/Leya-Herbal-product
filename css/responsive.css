@@ -1,0 +1,411 @@
+/* ============================================
+   Sri Herbal Care - Responsive Stylesheet
+   Mobile-first responsive breakpoints
+   ============================================ */
+
+/* ---------- Large Tablets & Small Laptops (1024px) ---------- */
+@media (max-width: 1024px) {
+  .about-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image img {
+    height: 300px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Tablets (768px) ---------- */
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 64px;
+    --sidebar-width: 260px;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .hero {
+    min-height: 90vh;
+    padding-top: calc(var(--navbar-height) + 1rem);
+  }
+
+  .hero-badge {
+    font-size: 0.82rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Navbar mobile */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    background: var(--bg-navbar);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    padding: var(--spacing-xl);
+    gap: var(--spacing-lg);
+    transform: translateY(-120%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 8px 30px var(--color-shadow);
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    padding: var(--spacing-sm) 0;
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  /* Products */
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .products-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box,
+  .filter-select {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-legal {
+    justify-content: center;
+  }
+
+  /* Dashboard */
+  .dashboard-sidebar {
+    transform: translateX(-100%);
+  }
+
+  .dashboard-sidebar.active {
+    transform: translateX(0);
+  }
+
+  .dashboard-main {
+    margin-left: 0;
+  }
+
+  .sidebar-toggle {
+    display: flex !important;
+  }
+
+  .data-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .data-table {
+    min-width: 600px;
+  }
+
+  /* Mobile-friendly dashboard table */
+  .data-table thead {
+    display: none;
+  }
+
+  .data-table tr {
+    display: block;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--spacing-md);
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+  }
+
+  .data-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem var(--spacing-sm);
+    border: none;
+    white-space: normal;
+  }
+
+  .data-table td::before {
+    content: attr(data-label);
+    flex: 1;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+  }
+
+  .data-table .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-sm);
+  }
+
+  .data-table .actions .btn {
+    width: 100%;
+  }
+
+  .data-table .table-img {
+    width: 56px;
+    height: 56px;
+  }
+
+  /* Newsletter */
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input,
+  .newsletter-form .btn {
+    width: 100%;
+  }
+
+  /* Mission Vision */
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Process */
+  .process-steps {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  /* Modal */
+  .modal {
+    margin: var(--spacing-md);
+  }
+
+  /* Back to top */
+  .back-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ---------- Mobile Phones (480px) ---------- */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .navbar-brand-text {
+    font-size: 1rem;
+  }
+
+  .nav-actions {
+    gap: 0.45rem;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .hero {
+    min-height: 86vh;
+  }
+
+  .hero-title {
+    font-size: clamp(1.9rem, 9vw, 2.45rem);
+  }
+
+  .hero-badge {
+    font-size: 0.78rem;
+  }
+
+  .section-header {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  /* Features */
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: var(--spacing-lg);
+  }
+
+  /* Products */
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .product-actions .btn,
+  .product-actions .cart-icon-btn,
+  .product-actions .cart-quantity-control {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cart-quantity-control {
+    display: flex;
+  }
+
+  .product-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Team */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Certificates */
+  .certificates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Factory */
+  .factory-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stats */
+  .satisfaction-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  /* Contact */
+  .contact-form-card,
+  .contact-info-card {
+    padding: var(--spacing-lg);
+  }
+
+  /* Login */
+  .login-card {
+    padding: var(--spacing-xl);
+  }
+
+  /* Dashboard stats */
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-content {
+    padding: var(--spacing-md);
+  }
+
+  .dashboard-header {
+    padding: var(--spacing-md);
+  }
+
+  /* Page header */
+  .page-header {
+    padding: calc(var(--navbar-height) + var(--spacing-2xl)) 0
+      var(--spacing-2xl);
+  }
+
+  /* Testimonials */
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  /* Newsletter box */
+  .newsletter-box {
+    padding: var(--spacing-xl);
+  }
+
+  /* Nav actions on very small screens */
+  .nav-actions {
+    gap: var(--spacing-sm);
+  }
+
+  .nav-icon-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Dashboard Sidebar Toggle Button ---------- */
+.sidebar-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: var(--color-cream);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--color-primary-dark);
+}
+
+/* ---------- Print Styles ---------- */
+@media print {
+  .navbar,
+  .footer,
+  .back-to-top,
+  .loading-screen,
+  .hamburger,
+  .nav-actions {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .section {
+    padding: 1rem 0;
+  }
+}

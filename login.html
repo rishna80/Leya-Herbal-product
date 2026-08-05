@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Admin login for Leya Organics dashboard"
+    />
+    <title>Admin Login | Leya Organics</title>
+    <link
+      rel="icon"
+      href="./assets/logo-1-removebg-preview.png"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="login-card">
+        <div class="login-header">
+          <img
+            src="./assets/logo-1-removebg-preview.png"
+            alt="Leya Organics Logo"
+          />
+          <h2>Admin Login</h2>
+          <p>Leya Organics Dashboard</p>
+        </div>
+
+        <div id="login-error" class="login-error" role="alert"></div>
+
+        <form id="login-form" class="login-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter username"
+              required
+              autocomplete="username"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter password"
+              required
+              autocomplete="current-password"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <div class="forgot-password">
+          <a href="#" id="forgot-password">Forgot Password?</a>
+        </div>
+
+        <a href="index.html" class="back-home-link">← Back to Website</a>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

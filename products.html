@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse Leya Organics' complete range of premium herbal products - capsules, powders, skincare, juices, and syrups."
+    />
+    <title>Products | Leya Organics</title>
+    <link
+      rel="icon"
+      href="./assets/logo-1-removebg-preview.png"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div id="loading-screen" class="loading-screen">
+      <img
+        src="./assets/logo-1-removebg-preview.png"
+        alt="Leya Organics"
+        class="loading-logo"
+      />
+      <div class="loading-spinner"></div>
+      <p class="loading-text">Leya Organics</p>
+    </div>
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img
+            src="./assets/logo-1-removebg-preview.png"
+            alt="Leya Organics Logo"
+            class="navbar-logo"
+          />
+          <span class="navbar-brand-text">Leya <span>Organics</span></span>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="products.html" class="nav-link active">Products</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            id="dark-mode-toggle"
+            class="nav-icon-btn"
+            aria-label="Toggle dark mode"
+          >
+            🌙
+          </button>
+          <a href="login.html" class="nav-icon-btn" aria-label="Admin Login"
+            >👤</a
+          >
+          <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="page-header">
+      <div class="container">
+        <h1>Our Products</h1>
+        <p>Explore our complete range of premium herbal products</p>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> / <span>Products</span>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <!-- Search & Filter Toolbar -->
+        <div class="products-toolbar animate-on-scroll">
+          <div class="search-box">
+            <input
+              type="text"
+              id="product-search"
+              placeholder="Search products..."
+              aria-label="Search products"
+            />
+          </div>
+          <select
+            id="category-filter"
+            class="filter-select"
+            aria-label="Filter by category"
+          >
+            <option value="">All Categories</option>
+          </select>
+          <select
+            id="price-filter"
+            class="filter-select"
+            aria-label="Filter by price"
+          >
+            <option value="">All Prices</option>
+            <option value="0-200">Under ₹200</option>
+            <option value="200-400">₹200 - ₹400</option>
+            <option value="400-600">₹400 - ₹600</option>
+            <option value="600-0">Above ₹600</option>
+          </select>
+          <span
+            id="result-count"
+            style="
+              color: var(--text-secondary);
+              font-size: 0.9rem;
+              white-space: nowrap;
+            "
+          ></span>
+        </div>
+
+        <!-- Products Grid -->
+        <div id="all-products" class="products-grid">
+          <!-- Products loaded dynamically via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="navbar-brand-text">Leya <span>Organics</span></div>
+            <p class="footer-desc">
+              Premium herbal product manufacturing company dedicated to bringing
+              nature's healing power to your doorstep.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://wa.me/918838850766"
+                class="social-icon"
+                aria-label="WhatsApp"
+                target="_blank"
+                >💬</a
+              >
+            </div>
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact Info</h4>
+            <ul class="footer-contact">
+              <li>📞 +91 8838850766</li>
+              <li>📧 info@leyaorganics.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Leya Organics. All Rights Reserved.</p>
+          <div class="footer-legal">
+            <a href="#" data-legal="privacy">Privacy Policy</a>
+            <a href="#" data-legal="terms">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
+    <script src="js/app.js"></script>
+    <script src="js/products.js"></script>
+  </body>
+</html>
